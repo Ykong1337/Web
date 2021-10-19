@@ -7,8 +7,8 @@ import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
@@ -53,5 +53,9 @@ public class MyConfig {
         return msf;
     }
 
+    @Bean
+    public AutowiredAnnotationBeanPostProcessor abc(){
+        return new AutowiredAnnotationBeanPostProcessor();
+    }
 
 }

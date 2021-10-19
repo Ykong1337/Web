@@ -1,5 +1,6 @@
 package com.ftg.learn.dept.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ftg.learn.dept.entity.Dept;
 import com.ftg.learn.dept.mapper.DeptMapper;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class DeptService extends ServiceImpl<DeptMapper, Dept> implements IDeptService {
+public class DeptService extends ServiceImpl<DeptMapper, Dept> implements IService<Dept> {
 
     @Autowired
     DeptMapper deptMapper;
