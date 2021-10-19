@@ -3,7 +3,7 @@ package com.ftg.learn.dept.testdept;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.ftg.learn.dept.entity.Dept;
 import com.ftg.learn.dept.mapper.DeptMapper;
-import com.ftg.learn.dept.util.Myconfig;
+import com.ftg.learn.dept.util.MyConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ public class DeptMapperTest {
 
     @BeforeTest
     public void init(){
-        AnnotationConfigApplicationContext bf1 = new AnnotationConfigApplicationContext(Myconfig.class);
+        AnnotationConfigApplicationContext bf1 = new AnnotationConfigApplicationContext(MyConfig.class);
         deptMapper = bf1.getBean(DeptMapper.class);
     }
 

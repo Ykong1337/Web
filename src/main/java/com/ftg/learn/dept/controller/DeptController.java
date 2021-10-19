@@ -17,7 +17,6 @@ public class DeptController {
         return "hello";
     }
 
-
     @GetMapping("/select")
     public Object test1(){
         return deptService.showAll();

@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @MapperScan("com.ftg.learn.dept.mapper")
-public class Myconfig {
+public class MyConfig {
 
     @Bean
     public DataSource initDataSource(){
