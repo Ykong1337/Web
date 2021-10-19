@@ -18,4 +18,5 @@ public class DeptService extends ServiceImpl<DeptMapper, Dept> implements IDeptS
     public List<Map<String,Object>> showAll(){
         return deptMapper.show();
     }
+
 }

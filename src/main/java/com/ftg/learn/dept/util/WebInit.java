@@ -16,6 +16,7 @@ public class WebInit implements WebApplicationInitializer {
         //初始化注解web上下文配置
         System.out.println("---> AnnotationConfigWebApplicationContext - web.xml webapp");
         AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
+
         root.scan("com.ftg.learn.dept");
         //加载web.xml里面的spring监听程序
         servletContext.addListener(new ContextLoaderListener(root));
