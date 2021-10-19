@@ -13,7 +13,6 @@ public class DeptController {
     DeptService deptService;
 
     @GetMapping("/first")
-    @ResponseBody
     public String test(){
         return "hello";
     }
