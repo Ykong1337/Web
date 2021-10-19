@@ -13,16 +13,16 @@ public class DeptMapperTest {
     DeptMapper deptMapper;
 
     @BeforeTest
-    public void init(){
+    public void init() {
         AnnotationConfigApplicationContext bf1 = new AnnotationConfigApplicationContext(MyConfig.class);
         deptMapper = bf1.getBean(DeptMapper.class);
     }
 
     @Test
-    public void testDeptMapper(){
+    public void testDeptMapper() {
         //生成where 条件
         QueryWrapper<Dept> qw = new QueryWrapper<>();
-        qw.like("dname","S");
+        qw.like("dname", "S");
         qw.orderByAsc("deptno");
         deptMapper.selectList(qw).forEach(System.out::println);
     }

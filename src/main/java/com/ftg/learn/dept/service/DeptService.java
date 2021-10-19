@@ -16,7 +16,7 @@ public class DeptService extends ServiceImpl<DeptMapper, Dept> implements IServi
     @Autowired
     DeptMapper deptMapper;
 
-    public List<Map<String,Object>> showAll(){
+    public List<Map<String, Object>> showAll() {
         return deptMapper.show();
     }
 

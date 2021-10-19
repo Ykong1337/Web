@@ -22,7 +22,7 @@ public class SpringmvcConfig extends WebMvcConfigurerAdapter {
 
     //配置模板解析器 并将配置器添加到springmvc容器里
     @Bean
-    public ViewResolver viewResolver(){
+    public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");

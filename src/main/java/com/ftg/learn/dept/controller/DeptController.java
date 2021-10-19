@@ -12,35 +12,35 @@ public class DeptController {
     DeptService deptService;
 
     @GetMapping("/first")
-    public String test(){
+    public String test() {
         return "hello";
     }
 
     @GetMapping("/select")
-    public Object test1(){
+    public Object test1() {
         return deptService.showAll();
     }
 
     @RequestMapping("/show")
-    public Object tes(){
+    public Object tes() {
         return deptService.listMaps();
     }
 
     @PostMapping("/save")
     //post
-    public int insert(Dept dept){
+    public int insert(Dept dept) {
         return deptService.saveDept(dept);
     }
 
     @DeleteMapping("/del")
     //post
-    public int delete(@RequestParam Integer id){
+    public int delete(@RequestParam Integer id) {
         return deptService.delDept(id);
     }
 
     @PostMapping("/upd")
     //post
-    public int upd(Dept dept){
+    public int upd(Dept dept) {
         return deptService.updDept(dept);
     }
 
