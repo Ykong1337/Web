@@ -20,4 +20,15 @@ public class DeptService extends ServiceImpl<DeptMapper, Dept> implements IServi
         return deptMapper.show();
     }
 
+    public int saveDept(Dept dept) {
+        return deptMapper.insert(dept);
+    }
+
+    public int delDept(Integer id) {
+        return deptMapper.deleteById(id);
+    }
+
+    public int updDept(Dept dept) {
+        return deptMapper.updateById(dept);
+    }
 }

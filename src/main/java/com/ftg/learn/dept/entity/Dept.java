@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class Dept {
 
     @TableId
-    public int deptno;
+    public Integer deptno;
 
     public String dname;
 

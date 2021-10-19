@@ -1,10 +1,9 @@
 package com.ftg.learn.dept.controller;
 
+import com.ftg.learn.dept.entity.Dept;
 import com.ftg.learn.dept.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class DeptController {
@@ -27,5 +26,22 @@ public class DeptController {
         return deptService.listMaps();
     }
 
+    @PostMapping("/save")
+    //post
+    public int insert(Dept dept){
+        return deptService.saveDept(dept);
+    }
+
+    @DeleteMapping("/del")
+    //post
+    public int delete(@RequestParam Integer id){
+        return deptService.delDept(id);
+    }
+
+    @PostMapping("/upd")
+    //post
+    public int upd(Dept dept){
+        return deptService.updDept(dept);
+    }
 
 }
